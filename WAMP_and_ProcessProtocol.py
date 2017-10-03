@@ -14,11 +14,6 @@ class MyProcessComponent(protocol.ProcessProtocol):
         self.transport.write(self.text)
         self.transport.closeStdin()
 
-
-    def triggerAnalytic(self):
-        self.transport.write(self.text)
-        self.transport.closeStdin()
-
     def outReceived(self, data):
         fieldLength = len(data) / 3
 
